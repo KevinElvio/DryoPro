@@ -13,3 +13,11 @@ Route::get('/login', function () {
 Route::get('/beranda', function () {
     return view('beranda');
 });
+
+Route::get('/riwayat', function () {
+    return view('riwayat');
+});
+
+Route::get('/about', function () {
+    return view('about');
+});
