@@ -10,6 +10,7 @@ export default {
       colors: {
         gradasi1: '#FFCF01',
         gradasi2: '#FF5D01',
+        kuning: '#FFF347',
         orange: '#FF5A00',
         merah: '#FF0000',
         formlogin: '#ECECEC'

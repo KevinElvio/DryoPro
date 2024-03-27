@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <nav class="bg-gradient-to-r from-gradasi1 to-gradasi2 flex items-center py-4 px-8 drop-shadow-3xl">
+    <nav class="bg-kuning flex items-center py-4 px-8 drop-shadow-3xl">
         <h1 class="text-merah text-3xl font-bold mx-20">DryoPro</h1>
 
         <div class="flex space-x-9 text-black font-bold mx-96">
