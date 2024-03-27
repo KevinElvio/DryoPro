@@ -1,5 +1,5 @@
 @extends('layouts.main')
 
-@section('beranda')
+@section('konten')
 <h1>ABOUT</h1>
 @endsection

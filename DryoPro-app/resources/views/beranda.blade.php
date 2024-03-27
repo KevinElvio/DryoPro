@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('beranda')    
+@section('konten')    
 <div class="mt-64">
     <div class="flex items-center justify-center">
         <h1 class="text-5xl font-bold">Halo Syukron!</h1>
