@@ -9,8 +9,8 @@
 </head>
 
 <body>
-    <nav class="bg-kuning flex items-center py-4 px-8 drop-shadow-3xl">
-        <h1 class="text-merah text-3xl font-bold mx-20">DryoPro</h1>
+    <nav class="bg-kuning flex items-center py-4 px-8 drop-shadow-xl">
+        <h1 class="text-merah text-4xl font-bold mx-20 ">DryoPro</h1>
 
         <div class="flex space-x-9 text-black font-bold mx-96">
             <a href="/beranda" class="hover:text-merah">Beranda</a>
