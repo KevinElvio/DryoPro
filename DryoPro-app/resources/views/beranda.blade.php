@@ -21,11 +21,11 @@
 
         </div>
         <div class="display flex justify-center items-center mt-20">
-            <div class="bg-green-500 h-14 w-32 rounded-xl flex justify-center items-center">
-                <button class=" text-4xl font-bold text-white">ON</button>
+            <div class="bg-green-400 h-14 w-32 rounded-xl flex justify-center items-center">
+                <button class=" text-4xl font-bold text-black">ON</button>
             </div>
             <div class="bg-gray-400 h-14 w-32 ml-10 rounded-xl flex justify-center items-center">
-                <button class=" text-4xl font-bold text-white">OFF</button>
+                <button class=" text-4xl font-bold text-black">OFF</button>
             </div>
         </div>
     @endsection
