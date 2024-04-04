@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @vite('resources/css/app.css')
-    <title>Beranda</title>
+    <title>{{ $title }}</title>
 </head>
 
 <body class="bg-gray-200 font-poppins">
@@ -13,7 +13,7 @@
         <h1 class="text-black text-3xl font-bold mx-20 ">DryoPro</h1>
 
         <div class="flex space-x-9 text-gray-800 font-bold mx-96">
-            <a href="/beranda" class="hover:text-black">Beranda</a>
+            <a href="/beranda" class="hover:text-black ">Beranda</a>
             <a href="/riwayat" class="hover:text-black">Riwayat</a>
             <a href="/about" class="hover:text-black">Panduan</a>
         </div>
