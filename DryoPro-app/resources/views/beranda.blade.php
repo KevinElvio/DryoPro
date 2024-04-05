@@ -16,14 +16,14 @@
                 <h1 class="text-6xl font-bold">Halo Syukron!</h1>
                 <div class="flex text-4xl font-normal">
                     <h3 class="">Mesin dalam kondisi,</h3>
-                    <h3 class="text-red-500 ml-2">mati</h3>
+                    <h3 class="text-red-500 ml-2">{{ $kondisi }}</h3>
                 </div>
             </div>
             <div class="bg-white w-72 h-64 rounded-lg drop-shadow-lg flex flex-col items-center">
                 <h1 class="mt-5 font-bold text-xl">Suhu</h1>
-                <h1 class="font-medium text-5xl mt-5">0°C</h1>
+                <h1 class="font-medium text-5xl mt-5">{{ $suhu }}C</h1>
                 <h1 class="font-bold mt-5 text-xl">Kelembapan</h1>
-                <h1 class="font-medium text-5xl mt-5">0 RH</h1>
+                <h1 class="font-medium text-5xl mt-5">{{ $kelembapan }} RH</h1>
             </div>
         </div>
         <div class="flex justify-end mr-72 mt-20">
