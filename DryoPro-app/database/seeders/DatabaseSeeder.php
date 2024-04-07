@@ -22,11 +22,11 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         
-        User::create([
-            'name' => 'Syukron',
-            'email' => 'syukron@gmail.com',
-            'password' => bcrypt('user')
-        ]);
+        // User::create([
+        //     'name' => 'Syukron',
+        //     'email' => 'syukron@gmail.com',
+        //     'password' => bcrypt('user')
+        // ]);
 
 
         Riwayat::create([
