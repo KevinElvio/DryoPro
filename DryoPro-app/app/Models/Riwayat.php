@@ -15,4 +15,8 @@ class Riwayat extends Model
     {
         return Carbon::parse($value);
     }
+
+    public function User(){
+        return $this->belongsTo(User::class);
+    }
 }

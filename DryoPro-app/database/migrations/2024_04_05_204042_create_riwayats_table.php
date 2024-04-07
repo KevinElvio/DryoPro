@@ -13,10 +13,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('riwayats', function (Blueprint $table) {
-            $table->id("id_user");
+            $table->id();
+            $table->foreignId("user_id");
             $table->date("tanggal");
             $table->dateTime("waktu");
-            // $table->timestamps();
+            $table->timestamps();
         });
     }
 
