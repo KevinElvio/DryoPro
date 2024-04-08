@@ -12,7 +12,7 @@ class CRiwayat extends Controller
     public function index(){
         return view('riwayat', [
             "title" => "Riwayat",
-            "riwayat" => Riwayat::latest()->get(),
+            "riwayat" => Riwayat::latest()->paginate(7),
         ]);
     }
 

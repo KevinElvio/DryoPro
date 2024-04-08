@@ -14,5 +14,7 @@
         </div>
         @endforeach
 
+        {{ $riwayat->links() }}
     </div>
+
 @endsection
