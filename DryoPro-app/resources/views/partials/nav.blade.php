@@ -6,7 +6,10 @@
         <a href="/riwayat" class="hover:text-black">Riwayat</a>
         <a href="/about" class="hover:text-black">Panduan</a>
     </div>
-    <button class="border-black border-2 text-black border-opacity-100 hover:bg-black hover:text-white font-medium py-2 px-4 rounded-full ml-96">
-        Logout
-    </button>
+    <form action="/logout" method="post"> 
+        @csrf       
+        <button class="border-black border-2 text-black border-opacity-100 hover:bg-black hover:text-white font-medium py-2 px-4 rounded-full ml-96" type="">
+            Logout
+        </button>
+    </form>
 </nav>

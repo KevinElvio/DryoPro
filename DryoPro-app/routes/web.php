@@ -1,32 +1,23 @@
 <?php
 
+use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\C_panduan;
 use App\Http\Controllers\CRiwayat;
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', function () {
-    return view('login', [
-        "title" => "Login"
-    ]);
-});
-Route::get('/login', function () {
-    return view('login', [
-        "title" => "Login"
-    ]);
-});
 
-Route::get('/beranda', function () {
-    return view('beranda', [
-        "title" => "Beranda",
-        "kondisi" => "Mati",
-        "suhu" => "0°",
-        "kelembapan" => "0",
-    ]);
-});
+Route::get('/', [LoginController::class, 'index'])->name('login')->middleware('guest');
 
-Route::get('/riwayat', [CRiwayat::class, 'index']);
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
+Route::post('/login', [LoginController::class, 'auth']);
+Route::post('/logout', [LoginController::class, 'logout']);
 
-Route::get('/about', [C_panduan::class, 'F_panduan']);
+Route::get('/beranda', [BerandaController::class, 'index'])->middleware('auth');
+
+Route::get('/riwayat', [CRiwayat::class, 'index'])->middleware('auth');
+
+Route::get('/about', [C_panduan::class, 'F_panduan'])->middleware('auth');
 
 
