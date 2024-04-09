@@ -13,7 +13,7 @@
 
         </div>
         <div class="mt-5 pr-96">
-            <h1>{{ $post["panduan"] }}</h1>
+            <h1>{!! $post["panduan"] !!}</h1>
             <div class="border-b border-black flex justify-evenly text-2xl font-medium mt-20 w-full mb-10"></div>
         </div>
     </div>
