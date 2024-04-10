@@ -17,7 +17,7 @@ class Panduan
             8. Pengguna dapat memulai dan mengakhiri proses pengeringan dengan adanya fitur turn on dan turn off pada dashboard<br><br>
             9. Pengguna dapat melihat fitur panduan untuk memahami cara menggunakan alat dan sistem pada IoT alat pengeringan bunga mawar, serta memperoleh informasi yang diperlukan untuk mengoptimalkan penggunaan alat<br><br>
             11. Pantau proses pengeringan secara berkala untuk menjaga kualitas bunga mawar yang dihasilkan.<br><br>
-            10. Pengguna dapat melihat riwayat dari proses pengeringan yang telah selesai<br><br>
+            10. Pengguna dapat melihat riwayat dari proses pengeringan yang telah selesai
 
             ",
 

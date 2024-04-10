@@ -48,7 +48,6 @@
                 class="w-full h-14 bg-black text-white font-normal px-4 py-2 rounded-xl hover:bg-gray-900 transition duration-200">Login</button>
         </form>
     </div>
-    <script src="{{ asset ("asset/>dropdownPanduan.js") }}"></script>
 </body>
 
 </html>

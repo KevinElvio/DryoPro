@@ -14,8 +14,6 @@
     @include('partials.nav')
 
     @yield('konten')
-
-    <script src="{{ asset ("asset/>dropdownPanduan.js") }}"></script>
 </body>
 
 </html>
