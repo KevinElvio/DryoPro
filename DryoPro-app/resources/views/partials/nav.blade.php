@@ -1,4 +1,4 @@
-<nav class="bg-white flex items-center py-4 px-8 drop-shadow-xl">
+<nav class="bg-white flex items-center py-4 px-8 drop-shadow-xl fixed top-0 z-10 w-full">
     <h1 class="text-black text-3xl font-bold mx-20 ">DryoPro</h1>
 
     <div class="flex space-x-9 text-gray-800 font-bold mx-96">
