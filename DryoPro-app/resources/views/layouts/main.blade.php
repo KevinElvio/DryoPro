@@ -14,6 +14,8 @@
     @include('partials.nav')
 
     @yield('konten')
+    
+    @include('partials.footer')
 </body>
 
 </html>
