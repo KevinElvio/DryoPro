@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('konten')
-    <h1 class="font-bold text-2xl mt-14 ml-60">Panduan</h1>
+    <h1 class="font-bold text-2xl mt-40 ml-60">Panduan</h1>
     @foreach ($panduan as $index => $post)  
     <div class="mt-14 ml-60">
         <div class="font-bold text-lg mt-16 flex justify-between items-center dropdownBtn" data-id="{{ $index }}">

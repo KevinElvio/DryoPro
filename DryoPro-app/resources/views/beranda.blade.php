@@ -16,7 +16,7 @@
     </div>
 @endif --}}
     <div class="mt-20">
-        <div class="flex justify-between items-center mx-60">
+        <div class="flex justify-between items-center mx-60 mt-40">
             <div>
                 <h1 class="text-6xl font-bold">Halo {{ auth()->user()->name }}!</h1>
                 <div class="flex text-4xl font-normal">
@@ -41,4 +41,5 @@
             </label>
         </div>
     </div>
+    <script src="{{ asset ("js/toogleOnOff.js") }}"></script>
 @endsection
