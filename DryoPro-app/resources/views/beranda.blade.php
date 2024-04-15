@@ -33,11 +33,9 @@
         </div>
         <div class="flex justify-end mr-72 mt-20">
             <input type="checkbox" id="toggleButton" class="hidden" />
-            <label for="toggleButton" class="block w-40 h-20 bg-red-600 rounded-full p-1 duration-300 ease-in-out">
-                <div
-                    class="bg-black w-16 h-16 rounded-full shadow-md transform translate-x-0 duration-300 ease-in-out mt-1 ml-2 flex items-center justify-center">
-                    <h1 class="text-black text-3xl font-bold ml-32">Off</h1>
-                </div>
+            <label for="toggleButton" class="block w-40 h-20 bg-red-600 rounded-full p-1 duration-300 ease-in-out tombol">
+                <div class="bg-white w-14 h-14 rounded-full shadow-md transform translate-x-0 duration-300 ease-in-out mt-2 ml-3 flex items-center justify-center wadah"></div>
+                <h1 class="text-white text-3xl font-medium ml-20 transform translate-x-0 duration-300 ease-in-out -mt-11 text">Off</h1>
             </label>
         </div>
     </div>
