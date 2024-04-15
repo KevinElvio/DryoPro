@@ -2,6 +2,7 @@
 const tombol = document.querySelector('.tombol');
 const wadah = document.querySelector('.wadah');
 const text = document.querySelector('.text');
+const status = document.querySelector('.status');
 
 let isActive = false;
 
@@ -17,6 +18,9 @@ tombol.addEventListener('click', () =>{
       text.classList.remove('ml-20');
       text.classList.add('ml-3');
       text.innerHTML = "On";
+      status.classList.remove('text-red-500');
+      status.classList.add('text-green-500');
+      status.innerHTML = "Hidup";
     
     } else {
       // text.style.transform = 'translateX(0)';
@@ -27,5 +31,8 @@ tombol.addEventListener('click', () =>{
       text.classList.remove('ml-3');
       text.classList.add('ml-20');
       text.innerHTML = "Off";
+      status.classList.add('text-red-500');
+      status.classList.remove('text-green-500');
+      status.innerHTML = "Mati";
     }
 });

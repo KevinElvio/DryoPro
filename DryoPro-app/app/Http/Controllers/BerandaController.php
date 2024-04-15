@@ -9,7 +9,6 @@ class BerandaController extends Controller
     public function index(){
         return view('beranda', [
             "title" => "Beranda",
-            "kondisi" => "Mati",
             "suhu" => "0°",
             "kelembapan" => "0",
         ]);
