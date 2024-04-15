@@ -11,7 +11,7 @@ class C_panduan extends Controller
     public function F_Panduan (){
         return view('about', [
             "title" => "Panduan",
-            "panduan" => Panduan::all()
+            "content" => Panduan::all()
         ]);
     }
 }

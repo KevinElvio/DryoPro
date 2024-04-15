@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Panduan;
 use App\Models\User;
 use App\Models\Riwayat;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -21,19 +22,6 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        
-        // User::create([
-        //     'name' => 'Syukron',
-        //     'email' => 'syukron@gmail.com',
-        //     'password' => bcrypt('user')
-        // ]);
-
-
-        Riwayat::create([
-            'user_id' => '1',
-            'tanggal' => now()->toDateString(),
-            'waktu' => now()
-        ]);
 
     }
 }
