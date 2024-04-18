@@ -20,4 +20,7 @@ Route::get('/riwayat', [CRiwayat::class, 'index'])->middleware('auth');
 
 Route::get('/about', [C_panduan::class, 'F_panduan'])->middleware('auth');
 
+Route::get('/bacasuhu', [BerandaController::class, 'bacasuhu']);
+Route::get('/bacakelembaban', [BerandaController::class, 'bacakelembaban']);
 
+Route::get('/simpan/{nilaisuhu}/{nilaikelembaban}', [BerandaController::class, 'simpansensor']);

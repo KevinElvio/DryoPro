@@ -26,18 +26,18 @@
             </div>
             <div class="bg-white w-72 h-64 rounded-lg drop-shadow-lg flex flex-col items-center">
                 <h1 class="mt-5 font-bold text-xl">Suhu</h1>
-                <h1 class="font-medium text-5xl mt-5">{{ $suhu }}C</h1>
-                <h1 class="font-bold mt-5 text-xl">Kelembapan</h1>
-                <h1 class="font-medium text-5xl mt-5">{{ $kelembapan }} RH</h1>
+                <h1 class="font-medium text-5xl mt-5" id="suhu">0°C</h1>
+                <h1 class="font-bold mt-5 text-xl">Kelembaban</h1>
+                <h1 class="font-medium text-5xl mt-5" id="kelembaban">0 RH</h1>
             </div>
         </div>
         <div class="flex justify-end mr-72 mt-20">
             <input type="checkbox" id="toggleButton" class="hidden" />
             <label for="toggleButton" class="block w-40 h-20 bg-red-600 rounded-full p-1 duration-300 ease-in-out tombol">
-                <div class="bg-white w-14 h-14 rounded-full shadow-md transform translate-x-0 duration-300 ease-in-out mt-2 ml-3 flex items-center justify-center wadah"></div>
-                <h1 class="text-white text-3xl font-medium ml-20 transform translate-x-0 duration-300 ease-in-out -mt-11 text">Off</h1>
+                <div class="bg-black w-14 h-14 rounded-full shadow-md transform translate-x-0 duration-300 ease-in-out mt-2 ml-3 flex items-center justify-center wadah"></div>
+                <h1 class="text-black text-3xl font-medium ml-20 transform translate-x-0 duration-300 ease-in-out -mt-11 text">Off</h1>
             </label>
         </div>
     </div>
-    <script src="{{ asset ("js/toogleOnOff.js") }}"></script>
-@endsection
+    {{-- <script src="{{ asset ("js/toogleOnOff.js") }}"></script> --}}
+    @endsection
