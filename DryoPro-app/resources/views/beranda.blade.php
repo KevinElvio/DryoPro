@@ -26,9 +26,15 @@
             </div>
             <div class="bg-white w-72 h-64 rounded-lg drop-shadow-lg flex flex-col items-center">
                 <h1 class="mt-5 font-bold text-xl">Suhu</h1>
-                <h1 class="font-medium text-5xl mt-5" id="suhu">0°C</h1>
+                <div class="flex">
+                    <h1 class="font-medium text-5xl mt-5 mr-3" id="suhu">0</h1>
+                    <h1 class="font-medium text-5xl mt-5">°C</h1>
+                </div>
                 <h1 class="font-bold mt-5 text-xl">Kelembaban</h1>
-                <h1 class="font-medium text-5xl mt-5" id="kelembaban">0 RH</h1>
+                <div class="flex">
+                    <h1 class="font-medium text-5xl mt-5 mr-5" id="kelembaban">0</h1>
+                    <h1 class="font-medium text-5xl mt-5">RH</h1>
+                </div>
             </div>
         </div>
         <div class="flex justify-end mr-72 mt-20">
