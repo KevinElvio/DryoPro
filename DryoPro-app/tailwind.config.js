@@ -14,6 +14,9 @@ export default {
       },
       fontFamily:{
         poppins : ['Poppins']
+      },
+      screens:{
+        
       }
     },
   },

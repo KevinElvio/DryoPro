@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('konten')
-{{-- @if (@session()->has('success'))
+    {{-- @if (@session()->has('success'))
     <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
         <strong class="font-bold">Success!</strong>
         <span class="block sm:inline">Berhasil Login</span>
@@ -37,13 +37,17 @@
                 </div>
             </div>
         </div>
-        <div class="flex justify-end mr-72 mt-20">
-            <input type="checkbox" id="toggleButton" class="hidden" />
-            <label for="toggleButton" class="block w-40 h-20 bg-red-600 rounded-full p-1 duration-300 ease-in-out tombol">
-                <div class="bg-black w-14 h-14 rounded-full shadow-md transform translate-x-0 duration-300 ease-in-out mt-2 ml-3 flex items-center justify-center wadah"></div>
-                <h1 class="text-black text-3xl font-medium ml-20 transform translate-x-0 duration-300 ease-in-out -mt-11 text">Off</h1>
+        <div class="flex justify-end mr-72 mt-16">
+            
+            <label class="inline-flex items-center cursor-pointer">
+                <input type="checkbox" value="" onchange="ubahStatus(this.checked)" class="sr-only peer">
+                <div
+                    class="relative w-24 h-14 bg-red-500 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-red-500 dark:peer-focus:ring-white rounded-full peer dark:bg-red-500 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[8px] after:start-[8px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-10 after:w-10 after:transition-all dark:border-gray-600 peer-checked:bg-green-600">
+                </div>
+                <span class="ms-3 text-3xl font-medium text-black dark:text-black" id="status">Off</span>
             </label>
+
         </div>
     </div>
     {{-- <script src="{{ asset ("js/toogleOnOff.js") }}"></script> --}}
-    @endsection
+@endsection

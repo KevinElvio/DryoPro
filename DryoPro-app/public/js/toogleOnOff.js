@@ -1,45 +1,69 @@
-// alert("halo");
-const tombol = document.querySelector('.tombol');
-const wadah = document.querySelector('.wadah');
-const text = document.querySelector('.text');
-const status = document.querySelector('.status');
-const log = document.querySelector('.log');
+function ubahStatus(value) {
+  if (value == true) {
+    value = "On";
+    document.querySelector('.statusText').innerHTML = 'Menyala';
+    document.querySelector('.statusText').style.color = 'green';
+  }
+  else {
+    value = "Off";
+    document.querySelector('.statusText').innerHTML = 'Mati';
+    document.querySelector('.statusText').style.color = 'red';
+  }
+  document.getElementById('status').innerHTML = value;
+
+  var xmlhttp = new XMLHttpRequest();
+  var url = "/kontrol?stat=" + value;
+
+  xmlhttp.onreadystatechange = function() {
+      if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+          document.getElementById('status').innerHTML = xmlhttp.responseText;
+      }
+      
+    xmlhttp.open("GET", url, false);
+    xmlhttp.send();
+  }
+
+}
 
 
 
-let isActive = false;
+// xmlhttp.onreadystatechange = function () {
+//   if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+//     var response = JSON.parse(xmlhttp.responseText);
+//     if (response.status === 'success') {
+//       document.getElementById('status').innerHTML = value;
+//     }
+//   }
 
-tombol.addEventListener('click', () =>{
-    isActive = !isActive;
+// xmlhttp.onreadystatechange = function () {
+//   if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+//     var response = JSON.parse(xmlhttp.responseText);
+//     if (response.status === 'success') {
+//       document.getElementById('status').innerHTML = value;
+//     }
+//   }
 
-    if (isActive) {
-      // text.style.transform = 'translateX(100%)';
-      tombol.classList.add('bg-green-500');
-      tombol.classList.remove('bg-red-600');
-      wadah.classList.add('ml-20','bg-white');
-      wadah.classList.remove('bg-black','ml-3');
-      // wadah.classList.add('bg-white');
-      // wadah.classList.remove('ml-3');
-      text.classList.add('ml-3','text-white');
-      text.classList.remove('ml-20','text-black');
-      text.innerHTML = "On";
-      status.classList.add('text-green-500');
-      status.classList.remove('text-red-500');
-      status.innerHTML = "Menyala";
-    
-    } else {
-      // text.style.transform = 'translateX(0)';
-      tombol.classList.remove('bg-green-500');
-      tombol.classList.add('bg-red-600');
-      wadah.classList.remove('ml-20','bg-white');
-      wadah.classList.add('ml-3','bg-black');
-      text.classList.remove('ml-3','text-white');
-      text.classList.add('ml-20','text-black');
-      text.innerHTML = "Off";
-      status.classList.remove('text-green-500');
-      status.classList.add('text-red-500');
-      status.innerHTML = "Mati";
-    }
-});
+
+// function ubahStatus(value) {
+//   var newValue = value ? "On" : "Off";
+
+//   var xhr = new XMLHttpRequest();
+//   var url = "/kontrol?stat=" + newValue;
+
+//   xhr.onreadystatechange = function () {
+//     if (xhr.readyState === 4 && xhr.status === 200) {
+//       console.log(xhr.responseText);
+//       document.getElementById('status').innerHTML = newValue;
+//     }
+//   };
+
+//   xhr.open("GET", url);
+//   xhr.send();
+// }
+
+
+
+
+
 
 

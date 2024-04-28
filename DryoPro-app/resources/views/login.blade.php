@@ -10,11 +10,11 @@
 
 <body class="font-poppins p-5">
 
-    <div class="mt-10 ml-20">
-        <h1 class="font-bold text-4xl">DryoPro</h1>
+    <div class="mt-10 flex-col items-center justify-center">
+        <h1 class="font-bold text-3xl xl:text-4xl">DryoPro</h1>
         @if (@session()->has('loginError'))
-            <div class="flex justify-center items-center mr-20">
-                <div class="bg-yellow-300 border text-black font-medium py-10 w-1/4 flex justify-center rounded relative"
+            <div class="flex justify-center items-center mt-5">
+                <div class="bg-yellow-300 border text-black font-sm py-2 w-80 flex justify-center rounded relative"
                     role="alert">
                     <svg class="w-10 mx-5" xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
@@ -30,10 +30,10 @@
 
 
         <div class="-ml-72">
-            <h1 class="font-semibold text-3xl mr-28">Login</h1>
-            <h1 class="font-normal text-xl">Hi, Welcome Back</h1>
+            <h1 class="font-semibold text-xl mr-28 xl:text-3xl">Login</h1>
+            <h1 class="font-normal text-md xl:text-xl">Hi, Welcome Back</h1>
         </div>
-        <form class="mt-20 w-1/4" action="/login" method="POST">
+        <form class="mt-20 w-1/2 xl:w-1/4" action="/login" method="POST">
             @csrf
             <div class="mb-5">
                 <label for="email" class="block text-bold font-medium mb-2">Email</label>
