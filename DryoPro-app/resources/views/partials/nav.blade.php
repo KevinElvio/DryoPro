@@ -1,7 +1,7 @@
-<nav class="bg-white  | xl:flex xl:items-center xl:py-4 xl:px-8 xl:drop-shadow-xl xl:fixed xl:top-0 xl:z-10 xl:w-full">
-    <h1 class="text-black text-xl my-10 | xl:text-3xl font-bold xl:mx-20 ">DryoPro</h1>
+<nav class="bg-white | xl:flex xl:items-center xl:py-4 xl:px-8 xl:drop-shadow-xl xl:fixed xl:top-0 xl:z-10 xl:w-full">
+    <h1 class="text-black text-xl mt-10 | xl:text-3xl font-bold xl:mx-20 ">DryoPro</h1>
 
-    <div class=" flex-col | xl:flex xl:space-x-9 text-gray-800 font-bold xl:mx-96">
+    <div class="  xl:flex xl:space-x-9 text-gray-800 font-bold xl:mx-96">
         <a href="/beranda" class="hover:text-black ">Beranda</a>
         <a href="/riwayat" class="hover:text-black">Riwayat</a>
         <a href="/about" class="hover:text-black">Panduan</a>

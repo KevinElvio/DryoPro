@@ -21,7 +21,7 @@
                 <h1 class="text-6xl font-bold">Halo {{ auth()->user()->name }}!</h1>
                 <div class="flex text-4xl font-normal">
                     <h3 class="">Mesin dalam kondisi,</h3>
-                    <h3 class="text-red-500 ml-2 status duration-300 ease-in-out">Mati</h3>
+                    <h3 class="text-red-500 ml-2 statusText duration-300 ease-in-out">Mati</h3>
                 </div>
             </div>
             <div class="bg-white w-72 h-64 rounded-lg drop-shadow-lg flex flex-col items-center">
