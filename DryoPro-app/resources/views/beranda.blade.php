@@ -16,9 +16,9 @@
     </div>
 @endif --}}
     <div class="mt-20">
-        <div class="flex justify-between items-center mx-60 mt-40">
+        <div class=" flex flex-col items-center justify-center | xl:flex xl:justify-between xl:items-center xl:mx-60 xl:mt-40">
             <div>
-                <h1 class="text-6xl font-bold">Halo {{ auth()->user()->name }}!</h1>
+                <h1 class="text-2xl | xl:text-6xl font-bold">Halo {{ auth()->user()->name }}!</h1>
                 <div class="flex text-4xl font-normal">
                     <h3 class="">Mesin dalam kondisi,</h3>
                     <h3 class="text-red-500 ml-2 statusText duration-300 ease-in-out">Mati</h3>

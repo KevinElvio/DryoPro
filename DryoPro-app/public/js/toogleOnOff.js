@@ -18,6 +18,8 @@ function ubahStatus(value) {
       if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
           document.getElementById('status').innerHTML = xmlhttp.responseText;
       }
+
+      console.log(xmlhttp.responseText);
       
     xmlhttp.open("GET", url, false);
     xmlhttp.send();

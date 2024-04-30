@@ -1,5 +1,5 @@
-const menuToggle = document.getElementById('menu-toggle');
-const menu = document.getElementById('menu');
+const menuToggle = document.querySelector('.MenuToggle');
+const menu = document.querySelector('.menu');
 
 menuToggle.addEventListener('click', () => {
     menu.classList.toggle('hidden');

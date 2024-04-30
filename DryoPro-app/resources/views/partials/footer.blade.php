@@ -1,14 +1,14 @@
-<footer class="bg-zinc-950 text-white py-8 mt-20 w-full">
+<footer class="bg-zinc-950 text-white w-full left-0 right-0 bottom-0 | py-8 xl:mt-20 xl:w-full">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between">
+        <div class=" flex flex-col | xl:flex xl:justify-between">
             <div>
-                <h3 class="text-4xl font-bold">DryoPro</h3>
-                <p class=" ml-10">Dry with ease.</p>
+                <h3 class=" text-2xl | xl:text-4xl font-bold">DryoPro</h3>
+                <p class=" xl:ml-10">Dry with ease.</p>
                 <p class="mt-5">Dehydrator pintar berbasis IoT <br> Mengeringkan Dimana saja, kapan saja.<br>
                     Efisien, Mudah, Hemat Waktu.</p>
             </div>
             <div>
-                <h3 class="text-lg font-bold">Hubungi Kami</h3>
+                <h3 class=" | xl:text-lg font-bold">Hubungi Kami</h3>
                 {{-- <p class="mt-4">Alamat: Jalan Contoh No. 123, Kota, Negara</p> --}}
                 <p class="mt-6 flex"><span class="mr-3 -mt-1">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">

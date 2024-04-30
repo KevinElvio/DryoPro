@@ -29,7 +29,7 @@
     <div class="flex flex-col items-center mt-20">
 
 
-        <div class="-ml-72">
+        <div class="-ml-20">
             <h1 class="font-semibold text-xl mr-28 xl:text-3xl">Login</h1>
             <h1 class="font-normal text-md xl:text-xl">Hi, Welcome Back</h1>
         </div>

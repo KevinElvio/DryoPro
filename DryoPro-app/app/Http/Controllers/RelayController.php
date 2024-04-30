@@ -9,7 +9,7 @@ class RelayController extends Controller
 {
     public function kontrol(Request $request)
     {
-        $stat = $request->input('stat');
+        $stat = $request->query('stat');
 
         if ($stat == "On") {
             Kontrol::updateOrCreate(['id' => 1], ['relay' => 1]);
