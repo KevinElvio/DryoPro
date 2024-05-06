@@ -1,5 +1,6 @@
 @extends('layouts.main')
 
+
 @section('konten')
     {{-- @if (@session()->has('success'))
     <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
@@ -16,7 +17,8 @@
     </div>
 @endif --}}
     <div class="mt-20">
-        <div class=" flex flex-col items-center justify-center | xl:flex xl:justify-between xl:items-center xl:mx-60 xl:mt-40">
+        <div
+            class=" flex flex-col items-center justify-center | xl:flex xl:justify-between xl:items-center xl:mx-60 xl:mt-40">
             <div>
                 <h1 class="text-2xl | xl:text-6xl font-bold">Halo {{ auth()->user()->name }}!</h1>
                 <div class="flex text-4xl font-normal">
@@ -38,7 +40,7 @@
             </div>
         </div>
         <div class="flex justify-end mr-72 mt-16">
-            
+
             <label class="inline-flex items-center cursor-pointer">
                 <input type="checkbox" value="" onchange="ubahStatus(this.checked)" class="sr-only peer">
                 <div
@@ -49,5 +51,6 @@
 
         </div>
     </div>
-    {{-- <script src="{{ asset ("js/toogleOnOff.js") }}"></script> --}}
+    <script src="{{ asset('js/toogleOnOff.js') }}"defer></script>
+    {{-- <script src="{{ asset('js/logOut.js') }}"></script> --}}
 @endsection

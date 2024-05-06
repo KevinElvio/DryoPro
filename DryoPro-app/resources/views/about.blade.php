@@ -14,6 +14,6 @@
         <div class="border-b border-black flex justify-evenly text-2xl font-medium mt-10 max-w-screen-xl"></div>
     </div>
     @endforeach
-
+    <script src="{{ asset('js/dropdownPanduan.js') }}"defer></script>
     {{-- <script src="{{ asset ("js/dropdownPanduan.js") }}"></script> --}}
 @endsection
