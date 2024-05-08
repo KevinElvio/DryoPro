@@ -1,4 +1,4 @@
-<nav class="bg-white sm:flex sm:flex-row items-center py-4 px-8 drop-shadow-xl fixed top-0 z-10 w-full h-16 sm:h-28">
+<nav class="bg-white sm:flex sm:flex-row items-center py-4 px-8 drop-shadow-xl fixed top-0 z-10 w-full h-16 sm:h-20 area">
     <div class="flex justify-between">
         <h1 class="text-black sm:text-3xl font-bold sm:mx-20 text-2xl">DryoPro</h1>
         <span class="sm:hidden cursor-pointer text-xl open" onclick="Menu()">
