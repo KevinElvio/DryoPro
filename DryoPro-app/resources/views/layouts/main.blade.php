@@ -30,9 +30,9 @@
     @include('partials.footer')
 
     
-    {{-- <script src="{{ asset('js/responsive.js') }}"></script> --}}
+    
 
-
+    <script src="{{ asset('js/responsive.js') }}"defer></script>
     {{-- <script src="{{ asset('jquery/jquery.min.js') }}"></script> --}}
     {{-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> --}}
     {{-- @include('sweetalert::alert') --}}

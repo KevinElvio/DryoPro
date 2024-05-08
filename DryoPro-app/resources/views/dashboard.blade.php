@@ -17,16 +17,15 @@
     </div>
 @endif --}}
     <div class="mt-20">
-        <div
-            class=" flex flex-col items-center justify-center | xl:flex xl:justify-between xl:items-center xl:mx-60 xl:mt-40">
-            <div>
-                <h1 class="text-2xl | xl:text-6xl font-bold">Halo {{ auth()->user()->name }}!</h1>
-                <div class="flex text-4xl font-normal">
+        <div class=" flex flex-col items-center justify-center sm:flex-row sm:justify-around sm:mx-40 sm:mt-40">
+            <div class="sm:ml-10 mb-20 mr-4 sm:mr-0">
+                <h1 class="text-2xl sm:mr-32 sm:text-6xl font-bold">Halo {{ auth()->user()->name }}!</h1>
+                <div class="flex sm:flex-row flex-col sm:text-4xl text-xl font-normal mr-10 sm:-mr-10">
                     <h3 class="">Mesin dalam kondisi,</h3>
-                    <h3 class="text-red-500 ml-2 statusText duration-300 ease-in-out">Mati</h3>
+                    <h3 class="text-red-500 sm:ml-2 statusText duration-300 ease-in-out">Mati</h3>
                 </div>
             </div>
-            <div class="bg-white w-72 h-64 rounded-lg drop-shadow-lg flex flex-col items-center">
+            <div class="bg-white w-72 h-64 rounded-lg drop-shadow-lg flex flex-col items-center ">
                 <h1 class="mt-5 font-bold text-xl">Suhu</h1>
                 <div class="flex">
                     <h1 class="font-medium text-5xl mt-5 mr-3" id="suhu">0</h1>
@@ -39,7 +38,7 @@
                 </div>
             </div>
         </div>
-        <div class="flex justify-end mr-72 mt-16">
+        <div class="flex justify-end sm:mr-96 mr-28 mt-16 mb-40">
 
             <label class="inline-flex items-center cursor-pointer">
                 <input type="checkbox" value="" onchange="ubahStatus(this.checked)" class="sr-only peer">
