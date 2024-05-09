@@ -17,6 +17,7 @@ return new class extends Migration
             $table->foreignId("user_id");
             $table->date("tanggal");
             $table->dateTime("waktu");
+            // $table->integer("status")->default(0);
             $table->timestamps();
         });
     }

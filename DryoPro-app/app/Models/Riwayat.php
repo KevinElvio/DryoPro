@@ -11,6 +11,7 @@ class Riwayat extends Model
 {
     
     use HasFactory;
+
     public function getWaktuAttribute($value)
     {
         return Carbon::parse($value);

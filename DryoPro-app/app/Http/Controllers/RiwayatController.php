@@ -11,6 +11,7 @@ class RiwayatController extends Controller
         return view('riwayat', [
             "title" => "Riwayat",
             "riwayat" => Riwayat::latest()->paginate(7),
+             
         ]);
     }
 }

@@ -1,5 +1,5 @@
-<footer class="bg-zinc-950 text-white py-8 mt-20 w-full">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+<footer class="bg-zinc-950 text-white py-8 mt-20 w-screen bottom-0 overflow-x-hidden    ">
+    <div class="w-screen mx-auto px-4 sm:px-8 ">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div>
                 <p class="mt-5">Dehydrator pintar berbasis IoT <br> Mengeringkan Dimana saja, kapan saja.<br>
@@ -26,7 +26,6 @@
             </div>
         </div>
         <div class="mt-8 border-t border-gray-700 pt-6 flex justify-between items-center">
-            <!-- Additional content here if needed -->
         </div>
     </div>
 </footer>

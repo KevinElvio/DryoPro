@@ -1,31 +1,31 @@
-function ubahStatus(value) {
-  if (value == true) {
-    value = "On";
-    document.querySelector('.statusText').innerHTML = 'Menyala';
-    document.querySelector('.statusText').style.color = 'green';
-  }
-  else {
-    value = "Off";
-    document.querySelector('.statusText').innerHTML = 'Mati';
-    document.querySelector('.statusText').style.color = 'red';
-  }
-  document.getElementById('status').innerHTML = value;
+// function ubahStatus(value) {
+//   if (value == true) {
+//     value = "On";
+//     document.querySelector('.statusText').innerHTML = 'Menyala';
+//     document.querySelector('.statusText').style.color = 'green';
+//   }
+//   else {
+//     value = "Off";
+//     document.querySelector('.statusText').innerHTML = 'Mati';
+//     document.querySelector('.statusText').style.color = 'red';
+//   }
+//   document.getElementById('status').innerHTML = value;
 
-  var xmlhttp = new XMLHttpRequest();
-  var url = "/kontrol?stat=" + value;
+//   var xmlhttp = new XMLHttpRequest();
+//   var url = "/kontrol?stat=" + value;
 
-  xmlhttp.onreadystatechange = function() {
-      if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-          document.getElementById('status').innerHTML = xmlhttp.responseText;
-      }
+//   xmlhttp.onreadystatechange = function() {
+//       if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+//           document.getElementById('status').innerHTML = xmlhttp.responseText;
+//       }
 
-      console.log(xmlhttp.responseText);
+//       console.log(xmlhttp.responseText);
       
-    xmlhttp.open("GET", url, false);
-    xmlhttp.send();
-  }
+//     xmlhttp.open("GET", url, false);
+//     xmlhttp.send();
+//   }
 
-}
+// };
 
 
 

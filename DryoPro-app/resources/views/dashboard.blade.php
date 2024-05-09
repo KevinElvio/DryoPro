@@ -50,6 +50,6 @@
 
         </div>
     </div>
-    <script src="{{ asset('js/toogleOnOff.js') }}"defer></script>
+    {{-- <script src="{{ asset('js/toogleOnOff.js') }}"defer></script> --}}
     {{-- <script src="{{ asset('js/logOut.js') }}"></script> --}}
 @endsection
