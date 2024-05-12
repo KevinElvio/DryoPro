@@ -9,5 +9,6 @@ class Kontrol extends Model
 {
     use HasFactory;
     
-    protected $fillabel = 'relay';
+    protected $primarykey = 'id';
+    protected $fillabel = 'status';
 }

@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('kontrols', function (Blueprint $table) {
             $table->id();
-            $table->integer("relay");
+            $table->integer("status");
             $table->timestamps();
         });
     }

@@ -16,7 +16,8 @@ class RiwayatSeeder extends Seeder
         Riwayat::create([
             'user_id' => '1',
             'tanggal' => now()->toDateString(),
-            'waktu' => now()
+            'waktu' => now(),
+            
         ]);
     }
 }

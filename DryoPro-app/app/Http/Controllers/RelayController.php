@@ -7,21 +7,15 @@ use Illuminate\Http\Request;
 
 class RelayController extends Controller
 {
-    public function kontrol(Request $request)
-    {
-        $stat = $request->query('stat');
+    // public function update(Request $request)
+    // {
+    //     $nilai = $request->input('status');
 
-        if ($stat == "On") {
-            Kontrol::updateOrCreate(['id' => 1], ['relay' => 1]);
-            // echo "On";
-            return response()->json(['status' => 'success', 'message' => 'Data toggle berhasil diperbarui!']);
-        } else {
-            Kontrol::updateOrCreate(['id' => 1], ['relay' => 0]);
-            // echo "Off";
-            return response()->json(['status' => 'error', 'message' => 'Permintaan tidak valid.']);
-        }
+    //     Kontrol::updateOrCreate(['id' => 1], ['status' => $nilai]);
 
-    }
+    // }
+
+
 
 }
 

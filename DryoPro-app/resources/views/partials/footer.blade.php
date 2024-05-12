@@ -1,7 +1,8 @@
-<footer class="bg-zinc-950 text-white py-8 mt-20 w-screen bottom-0 overflow-x-hidden    ">
+<footer class="bg-zinc-950 text-white py-8 mt-20 w-screen sm:w-full bottom-0 overflow-x-hidden">
     <div class="w-screen mx-auto px-4 sm:px-8 ">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div>
+                <h1 class="font-bold">DryoPro</h1>
                 <p class="mt-5">Dehydrator pintar berbasis IoT <br> Mengeringkan Dimana saja, kapan saja.<br>
                     Efisien, Mudah, Hemat Waktu.</p>
             </div>

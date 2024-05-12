@@ -39,14 +39,17 @@
             </div>
         </div>
         <div class="flex justify-end sm:mr-96 mr-28 mt-16 mb-40">
+            <form id="toogleForm" action="/kontrol" method="get" >
+                @csrf
+                <label class="inline-flex items-center cursor-pointer">
+                    <input type="checkbox" value="" onchange="ubahStatus(this.checked)" name="status" class="sr-only peer">
+                    <div
+                        class="relative w-24 h-14 bg-red-500 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-red-500 dark:peer-focus:ring-white rounded-full peer dark:bg-red-500 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[8px] after:start-[8px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-10 after:w-10 after:transition-all dark:border-gray-600 peer-checked:bg-green-600">
+                    </div>
+                    <span class="ms-3 text-3xl font-medium text-black dark:text-black" id="status">Off</span>
+                </label>
+            </form>
 
-            <label class="inline-flex items-center cursor-pointer">
-                <input type="checkbox" value="" onchange="ubahStatus(this.checked)" class="sr-only peer">
-                <div
-                    class="relative w-24 h-14 bg-red-500 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-red-500 dark:peer-focus:ring-white rounded-full peer dark:bg-red-500 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[8px] after:start-[8px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-10 after:w-10 after:transition-all dark:border-gray-600 peer-checked:bg-green-600">
-                </div>
-                <span class="ms-3 text-3xl font-medium text-black dark:text-black" id="status">Off</span>
-            </label>
 
         </div>
     </div>

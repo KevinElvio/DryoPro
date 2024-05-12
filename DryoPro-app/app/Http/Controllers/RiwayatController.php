@@ -14,4 +14,19 @@ class RiwayatController extends Controller
              
         ]);
     }
+    
+
+    //HISTROY STATUS
+    // public function toogleStatus(Request $request)
+    // {
+    //     $status = $request->input("status");
+
+    //     Riwayat::create([
+    //         'user_id' => 1,
+    //         'tanggal' => now()->toDateString(),
+    //         'waktu' => now(),
+    //         'status' => $status === 'Off' ? 0 : 1,
+    //     ]);
+    //     return response()->json(['status' => 'success']);
+    // }
 }

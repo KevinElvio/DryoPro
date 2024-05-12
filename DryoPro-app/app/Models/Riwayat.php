@@ -11,7 +11,7 @@ class Riwayat extends Model
 {
     
     use HasFactory;
-
+    protected $fillable = ['user_id','tanggal', 'waktu', 'status'];
     public function getWaktuAttribute($value)
     {
         return Carbon::parse($value);

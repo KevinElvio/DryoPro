@@ -19,6 +19,7 @@ Route::post('/logout', [LoginController::class, 'logout']);
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
 
+// Route::post('/dashboard/toogle-status',[RiwayatController::class, "toogleStatus"]);
 Route::get('/riwayat', [RiwayatController::class, 'index'])->middleware('auth');
 
 Route::get('/panduan', [PanduanController::class, 'F_panduan'])->middleware('auth');
@@ -28,4 +29,6 @@ Route::get('/bacakelembaban', [DashboardController::class, 'bacakelembaban']);
 
 Route::get('/simpan/{nilaisuhu}/{nilaikelembaban}', [DashboardController::class, 'simpansensor']);
 
-Route::get('/kontrol', [RelayController::class, 'kontrol']);
+// Route::get('/kontrol', [DashboardController::class, 'update']);
+// Route::get('/kontrol', [DashboardController::class, 'update']);
+Route::get('/kontrol', [DashboardController::class, 'createRiwayat']);

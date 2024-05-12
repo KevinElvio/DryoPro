@@ -14,7 +14,7 @@ class KontrolSeeder extends Seeder
     public function run(): void
     {
         Kontrol::create([
-            'relay' => '1',
+            'status' => '0',
         ]);
     }
 }
