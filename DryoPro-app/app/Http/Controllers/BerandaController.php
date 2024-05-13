@@ -7,7 +7,7 @@ use App\Models\Riwayat;
 use App\Models\Sensor;
 use Illuminate\Http\Request;
 
-class DashboardController extends Controller
+class BerandaController extends Controller
 {
     public function index()
     {
@@ -15,8 +15,8 @@ class DashboardController extends Controller
         // $kelembaban = Sensor::value('kelembaban');
 
 
-        return view('Dashboard', [
-            "title" => "Dashboard",
+        return view('Beranda', [
+            "title" => "Beranda",
             // "suhu" => $suhu,
             // "kelembaban" => $kelembaban,
         ]);

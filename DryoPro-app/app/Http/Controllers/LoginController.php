@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kontrol;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
 use RealRashid\SweetAlert\Facades\Alert;
+
 
 
 class LoginController extends Controller
@@ -38,14 +40,15 @@ class LoginController extends Controller
 
     public function logout(Request $request)
     {
-        Auth::logout();
+        if (Kontrol::where('status', 1)) {
+            return back()->with('Warning', 'Lampu masih dalam keadaan menyala, harap matikan lampu sebelum logout');
+        } else {
 
-
-        $request->session()->invalidate();
-
-        $request->session()->regenerateToken();
-
-        return redirect('/');
+            Auth::logout();
+            $request->session()->invalidate();
+            $request->session()->regenerateToken();
+            return redirect('/');
+        }
     }
 
     // public function logout(Request $request)
@@ -57,7 +60,7 @@ class LoginController extends Controller
     //         return redirect('/');
     //     } else {
     //         // Jika pengguna membatalkan konfirmasi logout, kembalikan respons bahwa logout dibatalkan
-            
+
     //         return redirect('/beranda');
     //     }
     // }

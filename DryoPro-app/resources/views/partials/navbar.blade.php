@@ -18,7 +18,7 @@
         <div class="sm:flex sm:flex-row text-gray-800 font-bold sm:mx-96">
             <ul class="sm:flex sm:space-x-9 sm:flex-row flex-col justify-start mt-8 sm:mt-3">
                 <li class="">
-                    <a href="/dashboard" class="hover:text-black ">Beranda</a>
+                    <a href="/beranda" class="hover:text-black ">Beranda</a>
                 </li>
                 <li class="sm:mx-40">
                     <a href="/riwayat" class="hover:text-black">Riwayat</a>

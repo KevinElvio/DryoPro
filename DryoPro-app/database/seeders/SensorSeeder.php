@@ -14,8 +14,8 @@ class SensorSeeder extends Seeder
     public function run(): void
     {
         Sensor::create([
-            'suhu' => '20.7',
-            'kelembaban' => '20',
+            'suhu' => '0',
+            'kelembaban' => '0',
         ]);
     }
 }
