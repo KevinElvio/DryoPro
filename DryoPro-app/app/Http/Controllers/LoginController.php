@@ -31,7 +31,7 @@ class LoginController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            return redirect()->intended('/dashboard');
+            return redirect()->intended('/beranda');
             // ->with('success','Login Berhasil');
         }
 
@@ -40,14 +40,14 @@ class LoginController extends Controller
 
     public function logout(Request $request)
     {
-        if (Kontrol::where('status', 1)) {
-            return back()->with('Warning', 'Lampu masih dalam keadaan menyala, harap matikan lampu sebelum logout');
-        } else {
-
+        if (Kontrol::where('status', 0)->exists()) {
             Auth::logout();
             $request->session()->invalidate();
             $request->session()->regenerateToken();
             return redirect('/');
+        } else {
+            // return back()->with('Warning', 'Lampu masih dalam keadaan menyala, harap matikan lampu sebelum logout');
+            return response()->json(['status' => 0]);
         }
     }
 

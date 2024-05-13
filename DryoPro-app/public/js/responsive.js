@@ -48,7 +48,7 @@ function ubahStatus(checked) {
     statusText.innerHTML = checked ? 'Menyala' : 'Mati';
     statusText.style.color = checked ? 'green' : 'red';
     statusElement.innerHTML = value;
-    
+
 
     console.log(value);
 
@@ -57,16 +57,51 @@ function ubahStatus(checked) {
     $.ajax({
         url: '/kontrol?status=' + value,
         method: 'get',
-        success: function(response) {
+        success: function (response) {
             console.log('Respons dari server:', response);
         },
-        error: function(xhr, status, error) {
+        error: function (xhr, status, error) {
             console.error('Terjadi kesalahan:', error);
         }
     });
 
-
 };
+
+// logout.js
+
+// Fungsi untuk memeriksa status dan menampilkan popup
+// function checkStatusAndShowPopup() {
+//     $.ajax({
+//         url: '/logout',
+//         method: 'get',
+//         success: function (response) {
+//             if (response.status === 0) {
+//                 // Tampilkan popup jika status adalah 0
+//                 swal({
+//                     title: "Lampu masih dalam keadaan menyala",
+//                     text: "Harap matikan lampu sebelum logout.",
+//                     icon: "warning",
+//                     buttons: true,
+//                     dangerMode: true,
+//                 }).then((willContinue) => {
+//                     if (willContinue) {
+//                         // Lakukan logout jika pengguna setuju untuk melanjutkan
+//                         window.location.href = "{{ route('logout') }}";
+//                     }
+//                 });
+//             }
+//         },
+//         error: function (xhr, status, error) {
+//             console.error('Terjadi kesalahan:', error);
+//         }
+//     });
+// }
+
+// // Panggil fungsi checkStatusAndShowPopup() saat halaman dimuat
+// $(document).ready(function () {
+//     checkStatusAndShowPopup();
+// });
+
 
 
 

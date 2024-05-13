@@ -21,8 +21,8 @@
 
     <div class="mt-20">
         @if (@session()->has('Warning'))
-            <div class="flex justify-center items-center mt-5">
-                <div class="bg-red-500 border text-black font-sm py-2 w-80 flex justify-center rounded relative"
+            <div class="flex justify-center items-center mt-32">
+                <div class="bg-red-500 border text-black font-sm py-2 w-96 flex justify-center rounded relative"
                     role="alert">
                     <svg class="w-10 mx-5" xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->

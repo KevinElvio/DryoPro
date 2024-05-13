@@ -9,6 +9,7 @@
 
     <script src="{{ asset('js/responsive.js') }}"></script>
     <script src="{{ asset('jquery/jquery.min.js') }}"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function() {
