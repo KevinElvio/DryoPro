@@ -17,10 +17,8 @@
     </div>
 @endif --}}
 
-
-
     <div class="mt-20">
-        @if (@session()->has('Warning'))
+        {{-- @if (@session()->has('Warning'))
             <div class="flex justify-center items-center mt-32">
                 <div class="bg-red-500 border text-black font-sm py-2 w-96 flex justify-center rounded relative"
                     role="alert">
@@ -32,13 +30,14 @@
                     {{ session('Warning') }}
                 </div>
             </div>
-        @endif
+        @endif --}}
         <div class=" flex flex-col items-center justify-center sm:flex-row sm:justify-around sm:mx-40 sm:mt-40">
             <div class="sm:ml-10 mb-20 mr-4 sm:mr-0">
                 <h1 class="text-2xl sm:mr-32 sm:text-6xl font-bold">Halo {{ auth()->user()->name }}!</h1>
                 <div class="flex sm:flex-row flex-col sm:text-4xl text-xl font-normal mr-10 sm:-mr-10">
                     <h3 class="">Lampu dalam kondisi,</h3>
-                    <h3 class="text-red-500 sm:ml-2 statusText duration-300 ease-in-out">Mati</h3>
+                    <h3 class="text-red-500 sm:ml-2 statusText duration-300 ease-in-out">
+                        {{ $status->status == 1 ? 'Menyala' : 'Mati' }}</h3>
                 </div>
             </div>
             <div class="bg-white w-72 h-64 rounded-lg drop-shadow-lg flex flex-col items-center ">
@@ -54,16 +53,19 @@
                 </div>
             </div>
         </div>
+
+
         <div class="flex justify-end sm:mr-96 mr-28 mt-16 mb-40">
             <form id="toogleForm" action="/kontrol" method="get">
                 @csrf
                 <label class="inline-flex items-center cursor-pointer">
                     <input type="checkbox" value="" onchange="ubahStatus(this.checked)" name="status"
-                        class="sr-only peer">
+                        class="sr-only peer" {{ $status->status == 1 ? 'checked' : '' }}>
                     <div
                         class="relative w-24 h-14 bg-red-500 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-red-500 dark:peer-focus:ring-white rounded-full peer dark:bg-red-500 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[8px] after:start-[8px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-10 after:w-10 after:transition-all dark:border-gray-600 peer-checked:bg-green-600">
                     </div>
-                    <span class="ms-3 text-3xl font-medium text-black dark:text-black" id="status">Off</span>
+                    <span class="ms-3 text-3xl font-medium text-black dark:text-black"
+                        id="status">{{ $status->status == 1 ? 'On' : 'Off' }}</span>
                 </label>
             </form>
 

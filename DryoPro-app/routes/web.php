@@ -29,4 +29,8 @@ Route::get('/bacakelembaban', [BerandaController::class, 'bacakelembaban']);
 
 Route::get('/simpan/{nilaisuhu}/{nilaikelembaban}', [BerandaController::class, 'simpansensor']);
 
+// Route::get('/kontrol', [BerandaController::class, 'showForm']);
 Route::get('/kontrol', [BerandaController::class, 'createRiwayat']);
+Route::get('/relay', [RelayController::class, 'kirimSensor']);
+// Route::post('/popup', [LoginController::class, 'popupLogout']);
+

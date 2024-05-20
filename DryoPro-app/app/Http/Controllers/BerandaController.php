@@ -6,6 +6,7 @@ use App\Models\Kontrol;
 use App\Models\Riwayat;
 use App\Models\Sensor;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class BerandaController extends Controller
 {
@@ -14,11 +15,11 @@ class BerandaController extends Controller
         // $suhu = Sensor::value('suhu');
         // $kelembaban = Sensor::value('kelembaban');
 
-
+        $status = Kontrol::find(1);
+        // dd($statusText);
         return view('Beranda', [
             "title" => "Beranda",
-            // "suhu" => $suhu,
-            // "kelembaban" => $kelembaban,
+            'status' => $status,
         ]);
     }
 
@@ -40,26 +41,6 @@ class BerandaController extends Controller
         Sensor::where('id', '1')->update(['suhu' => request()->nilaisuhu, 'kelembaban' => request()->nilaikelembaban]);
     }
 
-    // public function update(Request $request)
-    // {
-    //     $nilai = $request->input('status');
-    //     if ($nilai == "On") {
-    //         Riwayat::create([
-    //             'user_id' => 1,
-    //             'tanggal' => now()->toDateString(),
-    //             'waktu' => now(),
-    //             'status' => "On",
-    //         ]);
-    //     } else {
-    //         Riwayat::create([
-    //             'user_id' => 1,
-    //             'tanggal' => now()->toDateString(),
-    //             'waktu' => now(),
-    //             'status' => "Off",
-    //         ]);
-    //     }
-    // }
-
     public function createRiwayat(Request $request)
     {
         $nilai = $request->input('status');
@@ -69,7 +50,7 @@ class BerandaController extends Controller
                 'user_id' => 1,
                 'tanggal' => now()->toDateString(),
                 'waktu' => now(),
-                'status' => "On",
+                'status' => $nilai,
             ]);
         } else {
             Kontrol::where('id', '1')->update(['status' => 0]);
@@ -77,8 +58,9 @@ class BerandaController extends Controller
                 'user_id' => 1,
                 'tanggal' => now()->toDateString(),
                 'waktu' => now(),
-                'status' => "Off",
+                'status' => $nilai,
             ]);
         }
+        
     }
 }

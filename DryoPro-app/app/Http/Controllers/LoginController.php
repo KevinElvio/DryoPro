@@ -38,18 +38,49 @@ class LoginController extends Controller
         return back()->with('loginError', 'Data yang Anda masukkan salah. Mohon cek kembali !');
     }
 
+    // public function logout(Request $request)
+    // {
+    //     if (Kontrol::where('status', 0)->exists()) {
+    //         Auth::logout();
+    //         $request->session()->invalidate();
+    //         $request->session()->regenerateToken();
+    //         return redirect('/')->with("success", "Anda Berhasil Logout");
+    //     } else {
+    //         return back()->with('Warning', 'Lampu masih dalam keadaan menyala, harap matikan lampu sebelum logout');
+    //     }
+    // }
+
     public function logout(Request $request)
     {
-        if (Kontrol::where('status', 0)->exists()) {
+        // Cek status toogle dari database
+        $statusToogle = Kontrol::find(1)->status;
+
+        // Jika status toogle menyala (1)
+        if ($statusToogle == 1) {
+            // Tampilkan peringatan dan kembali ke halaman sebelumnya
+            return back()->with('Warning', 'Lampu masih dalam keadaan menyala. Matikan lampu sebelum logout.');
+        } else {
+            // Jika status toogle mati (0)
+            // Lakukan proses logout seperti biasa
             Auth::logout();
             $request->session()->invalidate();
             $request->session()->regenerateToken();
-            return redirect('/');
-        } else {
-            // return back()->with('Warning', 'Lampu masih dalam keadaan menyala, harap matikan lampu sebelum logout');
-            return response()->json(['status' => 0]);
+
+            // Jika Anda ingin menampilkan popup SweetAlert
+            // Anda dapat mengirimkan respons JSON dari sini
+            return response()->json([
+                'message' => 'Anda berhasil logout.'
+            ]);
         }
     }
+
+
+    // public function popupLogout(Request $request)
+    // {
+    //     return response()->json([
+    //         "popup" => "Anda Berhasil Logout"
+    //     ]);
+    // }
 
     // public function logout(Request $request)
     // {
