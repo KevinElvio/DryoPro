@@ -1,12 +1,3 @@
-// $(document).ready(function() {
-//     setInterval(function() {
-//         $("#suhu").load("{{ url('bacasuhu') }}");
-//         $("#kelembaban").load("{{ url('bacakelembaban') }}");
-//     }, 1000);
-// });
-
-// import { data } from "autoprefixer";
-// import { error } from "laravel-mix/src/Log";
 
 function Menu() {
     var open = document.querySelector('.open');
@@ -56,24 +47,9 @@ function ubahStatus(checked) {
 
     console.log(value);
 
-    // document.getElementById('toogleForm').submit();
-
-    // $.ajax({
-    //     url: '/kontrol?status=' + value,
-    //     method: 'get',
-    //     success: function (response) {
-    //         console.log('Respons dari server:', response);
-    //     },
-    //     error: function (xhr, status, error) {
-    //         console.error('Terjadi kesalahan:', error);
-    //     }
-    // });
-
     $.ajax({
-        url: '/kontrol',
+        url: '/kontrol?status=' + value,
         method: 'get',
-        contentType: 'application/json',
-        data: JSON.stringify({ status: value }),
         success: function (response) {
             console.log('Respons dari server:', response);
         },
@@ -82,40 +58,8 @@ function ubahStatus(checked) {
         }
     });
 
-
 };
 
-
-
-// $(document).ready(function () {
-//     $('#log').on('click', function () {
-//         Swal.fire({
-//             title: "Are you sure?",
-//             text: "You won't be able to revert this!",
-//             icon: "warning",
-//             showCancelButton: true,
-//             confirmButtonColor: "#3085d6",
-//             cancelButtonColor: "#d33",
-//             confirmButtonText: "Yes, delete it!"
-//         }).then((result) => {
-//             if (result.isConfirmed) {
-//                 $.ajax({
-//                     url: "/logout",
-//                     method: "POST",
-//                     data: {
-//                         "_csrf": `{{ csrf_token() }}`
-//                     },
-//                     success: function (response) {
-//                         window.location.href = ("/");
-//                     },
-//                     error: function (response) {
-//                         alert("Terjadi kesalahan saat logout.");
-//                     }
-//                 })
-//             }
-//         });
-//     });
-// });
 
 
 

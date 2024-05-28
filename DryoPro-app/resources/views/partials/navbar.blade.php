@@ -13,7 +13,6 @@
                 stroke="currentColor" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
             </svg>
-
         </span>
     </div>
 
@@ -21,7 +20,7 @@
         <div class="sm:flex sm:flex-row text-gray-800 font-bold sm:mx-96">
             <ul class="sm:flex sm:space-x-9 sm:flex-row flex-col justify-start mt-8 sm:mt-3">
                 <li class="">
-                    <a href="/beranda" class="hover:text-black ">Beranda</a>
+                    <a href="/beranda" class="hover:text-black">Beranda</a>
                 </li>
                 <li class="sm:mx-40">
                     <a href="/riwayat" class="hover:text-black">Riwayat</a>
@@ -30,7 +29,6 @@
                     <a href="/panduan" class="hover:text-black">Panduan</a>
                 </li>
             </ul>
-
         </div>
         <button
             class="border-black border-2 text-black border-opacity-100 hover:bg-black hover:text-white font-medium py-2 px-4 rounded-full sm:ml-96 mt-4 sm:mt-0"
@@ -40,15 +38,14 @@
             @csrf
         </form> --}}
     </div>
-
 </nav>
 
 <script>
-
     $('#log').on('click', function() {
-        var statusToogle = document.querySelector('[name="status"]').checked;
+        var statusToggleElement = document.querySelector('[name="status"]');
+        var statusToogle = statusToggleElement ? statusToggleElement.checked : false;
 
-        if (statusToogle) {
+        if (statusToggleElement && statusToogle) {
             Swal.fire({
                 title: "Peringatan",
                 text: "Lampu masih dalam keadaan menyala. Matikan lampu sebelum logout.",
@@ -79,7 +76,7 @@
                         error: function(response) {
                             alert("Terjadi kesalahan saat logout.");
                         }
-                    })
+                    });
                 }
             });
         }
