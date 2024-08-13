@@ -1,1 +1,1 @@
-DryoPro is a major project involving several major stakeholders based on a website using Laravel in its development. A large agro-industry themed application, DryoPro is an Internet of Things (IoT) application development project. Integrated with ESP32 and DHT22 sensors for temperature and humidity detection. The main features are several features to automatically maintain temperature for the drying process, temperature and humidity monitoring, and drying simulation.
+
